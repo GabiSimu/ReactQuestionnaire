@@ -23,22 +23,21 @@ function Questions() {
     }
   ];
 
-  const [question, setQuestion] = useState;
 
-  const nextHandler = () => {
-    setQuestion()
-  }
-
-  var questionsNumber = 0;
+  const [questionIdx, setQuestionIdx] = useState(0);
+  const [question, setQuestion] = useState("");
+  
   
   const clickHandler = () => {
-    setQuestion(questions[questionsNumber])
+
+    setQuestion(questions[questionIdx])
+    setQuestionIdx((prevQuestionIdx) => prevQuestionIdx + 1)
   }
 
 
   return(
     <div className="Intrebari">
-      <h2>question</h2>
+      <h2>{question.answer2}</h2>
       <button onClick={clickHandler}>answer1</button>
       <button onClick={clickHandler}>answer1</button>
       <button onClick={clickHandler}>answer1</button>

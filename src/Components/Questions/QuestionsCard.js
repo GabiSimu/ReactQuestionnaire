@@ -6,10 +6,16 @@ function QuestionsCard (props) {
 return (
     <div>
         <div>
-            <label>props.Question</label>
-            <label>props.answer1</label>
+            <label>Question</label>
+            <button>answer1</button>
+            <button>answer2</button>
+            <button>answer3</button>
+            <button>Next Question</button>
         </div>
+
     </div>
 )
 
 }
+
+export default QuestionsCard;

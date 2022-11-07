@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import Questions from "../Questions/Questions";
+import "./Questionnaire.css"
 
 function Questionnaire() {
   const url = "http://locahost:8080/questions";
@@ -52,13 +53,15 @@ function Questionnaire() {
 
   return (
     <div>
+    <div className="questionnaire">
       <label>Name</label>
       <input type="text" value={enteredName} onChange={nameChangeHandler} />
       <label>Email</label>
       <input type="text" value={enteredEmail} onChange={emailChangeHandler} />
       <button onClick={clickHandlerSaveData}>Save data</button>
-      <button onClick={clickHandlerStart}>Start</button>
+      <button className="questionnaire" onClick={clickHandlerStart}>Start</button>
       {currentQuestion}
+    </div>
     </div>
   );
 }

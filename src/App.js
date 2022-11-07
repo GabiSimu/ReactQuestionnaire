@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
    
-        <button onClick={clickHandlerNewQuestionnaire}>
+        <button className="button" onClick={clickHandlerNewQuestionnaire}>
           <b>New questionnaire</b>
         </button>
         {showNewQuestionnaire && <Questionnaire/>}
